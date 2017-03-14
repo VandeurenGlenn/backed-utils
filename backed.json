@@ -1,0 +1,8 @@
+{
+  "bundles": [{
+    "src": "src/utils.js",
+    "dest": "dist/utils.js",
+    "moduleName": "backedUtils"
+  }],
+  "format": ["es", "iife", "cjs"]
+}

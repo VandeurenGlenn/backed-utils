@@ -1,0 +1,12 @@
+{
+  "name": "backed-utils",
+  "version": "0.0.0",
+  "description": "Utilities used in Backed.",
+  "main": "utils-node.js",
+  "module": "dist/utils-es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Glenn Vandeuren <vandeurenglenn@gmail.com>",
+  "license": "CC-BY-NC-ND-4.0"
+}
