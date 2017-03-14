@@ -1,6 +1,6 @@
 {
   "name": "backed-utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Utilities used in Backed.",
   "main": "utils-node.js",
   "module": "dist/utils-es.js",
