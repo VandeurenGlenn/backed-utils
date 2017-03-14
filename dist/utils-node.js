@@ -14,6 +14,24 @@ var toJsProp = string => {
   return string;
 };
 
+var fireEvent = (type=String, detail=null, target=document) => {
+  target.dispatchEvent(new CustomEvent(type, {detail: detail}));
+};
+
+var loadScript = src => {
+  return new Promise((resolve, reject) => {
+    let script = document.createElement('script');
+    script.src = src;
+    script.onload = result => {
+      resolve(result);
+    };
+    script.onerror = error => {
+      reject(error);
+    };
+    document.body.appendChild(script);
+  });
+};
+
 var utils = {
   toJsProp: toJsProp,
   fireEvent: fireEvent,

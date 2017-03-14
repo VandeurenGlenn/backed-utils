@@ -12,6 +12,30 @@ var toJsProp = string => {
   return string;
 };
 
+/**
+ * @mixin backed
+ * @param {string} type Name of the event
+ * @param {HTMLElement} target Name of the event
+ * @param {string|boolean|number|object|array} detail
+ */
+var fireEvent = (type=String, detail=null, target=document) => {
+  target.dispatchEvent(new CustomEvent(type, {detail: detail}));
+};
+
+var loadScript = src => {
+  return new Promise((resolve, reject) => {
+    let script = document.createElement('script');
+    script.src = src;
+    script.onload = result => {
+      resolve(result);
+    };
+    script.onerror = error => {
+      reject(error);
+    };
+    document.body.appendChild(script);
+  });
+};
+
 var utils = {
   toJsProp: toJsProp,
   fireEvent: fireEvent,
